@@ -23,6 +23,9 @@ export function Countdown() {
 
   useEffect(() => {
     if (activeCycle) document.title = `Ignite Timer | ${minutes}:${seconds}`;
+    return () => {
+      document.title = 'Ignite Timer';
+    };
   }, [minutes, seconds, activeCycle]);
 
   useEffect(() => {
